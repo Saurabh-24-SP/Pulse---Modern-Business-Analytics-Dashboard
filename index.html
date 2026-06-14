@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse — Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img id="logo" src="logo.png" alt="Pulse logo" />
+                <span class="brand-name">Pulse</span>
+            </div>
+
+            <nav class="nav">
+                <div class="nav-pill" id="navPill"></div>
+                <a href="#" class="nav-item active" data-index="0">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-index="1">
+                    <span class="nav-icon">▤</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-index="2">
+                    <span class="nav-icon">◫</span>
+                    <span>Customers</span>
+                </a>
+                <a href="#" class="nav-item" data-index="3">
+                    <span class="nav-icon">⊞</span>
+                    <span>Orders</span>
+                </a>
+                <a href="#" class="nav-item" data-index="4">
+                    <span class="nav-icon">◷</span>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item" data-index="5">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="plan-card">
+                    <p class="plan-card-label">Current plan</p>
+                    <p class="plan-card-name">Growth</p>
+                    <div class="plan-bar">
+                        <div class="plan-bar-fill"></div>
+                    </div>
+                    <p class="plan-card-meta">68 of 100 seats used</p>
+                    <a href="#" class="plan-upgrade">Upgrade plan</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div class="topbar-title">
+                    <h1>Overview</h1>
+                    <p>Welcome back — here's how things look today.</p>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search-box">
+                        <span class="search-icon">⌕</span>
+                        <input type="text" placeholder="Search anything..." />
+                    </div>
+                    <button class="icon-btn" aria-label="Notifications">
+                        🔔
+                        <span class="icon-dot"></span>
+                    </button>
+                    <div class="user-chip">
+                        <div class="user-avatar">SA</div>
+                        <div class="user-info">
+                            <span class="user-name">Saurabh</span>
+                            <span class="user-role">Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <main class="content">
+
+                <!-- STAT CARDS -->
+                <section class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-label">Total Revenue</span>
+                            <span class="stat-trend up">▲ 12.4%</span>
+                        </div>
+                        <p class="stat-value">₹4,82,300</p>
+                        <p class="stat-sub">vs ₹4,29,100 last month</p>
+                        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+                            <polyline points="0,24 15,20 30,22 45,12 60,15 75,6 90,8 100,2" />
+                        </svg>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-label">Active Users</span>
+                            <span class="stat-trend up">▲ 8.1%</span>
+                        </div>
+                        <p class="stat-value">18,204</p>
+                        <p class="stat-sub">vs 16,840 last month</p>
+                        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+                            <polyline points="0,18 15,20 30,14 45,16 60,10 75,12 90,4 100,6" />
+                        </svg>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-label">New Orders</span>
+                            <span class="stat-trend down">▼ 3.2%</span>
+                        </div>
+                        <p class="stat-value">1,026</p>
+                        <p class="stat-sub">vs 1,060 last month</p>
+                        <svg class="spark warn" viewBox="0 0 100 30" preserveAspectRatio="none">
+                            <polyline points="0,6 15,10 30,8 45,16 60,14 75,20 90,18 100,24" />
+                        </svg>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-label">Churn Rate</span>
+                            <span class="stat-trend up">▲ 0.4%</span>
+                        </div>
+                        <p class="stat-value">2.1%</p>
+                        <p class="stat-sub">vs 1.7% last month</p>
+                        <svg class="spark warn" viewBox="0 0 100 30" preserveAspectRatio="none">
+                            <polyline points="0,10 15,8 30,12 45,10 60,14 75,16 90,18 100,20" />
+                        </svg>
+                    </div>
+                </section>
+
+                <!-- CHART + ACTIVITY -->
+                <section class="content-row">
+
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Revenue trend</h3>
+                                <p>Monthly recurring revenue, last 6 months</p>
+                            </div>
+                            <div class="chart-legend">
+                                <span><i class="dot dot-coral"></i> Revenue</span>
+                                <span><i class="dot dot-sage"></i> Target</span>
+                            </div>
+                        </div>
+
+                        <div class="bar-chart">
+                            <div class="bar-group">
+                                <div class="bar target" style="height:62%"></div>
+                                <div class="bar revenue" style="height:48%"></div>
+                                <span class="bar-label">Jan</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar target" style="height:65%"></div>
+                                <div class="bar revenue" style="height:55%"></div>
+                                <span class="bar-label">Feb</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar target" style="height:68%"></div>
+                                <div class="bar revenue" style="height:60%"></div>
+                                <span class="bar-label">Mar</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar target" style="height:70%"></div>
+                                <div class="bar revenue" style="height:72%"></div>
+                                <span class="bar-label">Apr</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar target" style="height:74%"></div>
+                                <div class="bar revenue" style="height:80%"></div>
+                                <span class="bar-label">May</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar target" style="height:78%"></div>
+                                <div class="bar revenue" style="height:92%"></div>
+                                <span class="bar-label">Jun</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card activity-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Recent activity</h3>
+                                <p>Latest updates across your workspace</p>
+                            </div>
+                        </div>
+
+                        <ul class="activity-list">
+                            <li>
+                                <div class="activity-avatar coral">RP</div>
+                                <div class="activity-body">
+                                    <p><strong>Riya Patel</strong> upgraded to Growth plan</p>
+                                    <span>2 minutes ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="activity-avatar sage">AK</div>
+                                <div class="activity-body">
+                                    <p><strong>Arjun Kapoor</strong> closed 3 support tickets</p>
+                                    <span>18 minutes ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="activity-avatar amber">NM</div>
+                                <div class="activity-body">
+                                    <p><strong>Neha Mishra</strong> exported the May report</p>
+                                    <span>1 hour ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="activity-avatar coral">VS</div>
+                                <div class="activity-body">
+                                    <p><strong>Vikram Singh</strong> added 2 new teammates</p>
+                                    <span>3 hours ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="activity-avatar sage">PJ</div>
+                                <div class="activity-body">
+                                    <p><strong>Priya Joshi</strong> connected Stripe account</p>
+                                    <span>Yesterday</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <!-- TABLE -->
+                <section class="card table-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Recent orders</h3>
+                            <p>Latest transactions across all channels</p>
+                        </div>
+                        <a href="#" class="view-all">View all →</a>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Plan</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mono">#PLS-1042</td>
+                                    <td>
+                                        <div class="cell-user">
+                                            <div class="cell-avatar coral">RP</div>
+                                            Riya Patel
+                                        </div>
+                                    </td>
+                                    <td>Growth</td>
+                                    <td class="mono">₹2,499</td>
+                                    <td><span class="badge success">Paid</span></td>
+                                    <td>Jun 12, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">#PLS-1041</td>
+                                    <td>
+                                        <div class="cell-user">
+                                            <div class="cell-avatar sage">AK</div>
+                                            Arjun Kapoor
+                                        </div>
+                                    </td>
+                                    <td>Pro</td>
+                                    <td class="mono">₹4,999</td>
+                                    <td><span class="badge success">Paid</span></td>
+                                    <td>Jun 12, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">#PLS-1040</td>
+                                    <td>
+                                        <div class="cell-user">
+                                            <div class="cell-avatar amber">NM</div>
+                                            Neha Mishra
+                                        </div>
+                                    </td>
+                                    <td>Starter</td>
+                                    <td class="mono">₹999</td>
+                                    <td><span class="badge pending">Pending</span></td>
+                                    <td>Jun 11, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">#PLS-1039</td>
+                                    <td>
+                                        <div class="cell-user">
+                                            <div class="cell-avatar coral">VS</div>
+                                            Vikram Singh
+                                        </div>
+                                    </td>
+                                    <td>Growth</td>
+                                    <td class="mono">₹2,499</td>
+                                    <td><span class="badge failed">Failed</span></td>
+                                    <td>Jun 10, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">#PLS-1038</td>
+                                    <td>
+                                        <div class="cell-user">
+                                            <div class="cell-avatar sage">PJ</div>
+                                            Priya Joshi
+                                        </div>
+                                    </td>
+                                    <td>Pro</td>
+                                    <td class="mono">₹4,999</td>
+                                    <td><span class="badge success">Paid</span></td>
+                                    <td>Jun 9, 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
